@@ -8,6 +8,7 @@ main :: IO()
 main = do
     salary <- getLine
     let sal = read salary :: Float
+    putStrLn "the salary is"
     print sal
     let dearnessAllowance = sal * 0.40
     let houseRent = sal * 0.20
