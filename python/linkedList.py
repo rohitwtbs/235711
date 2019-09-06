@@ -22,14 +22,16 @@ class LinkedList:
 			print temp.data,
 			temp = temp.next
 
-	def reverseList(this):
-		print "printing reverseList"
-		temp = this.head
+	def reverseList(this,llist, head):
+
+		temp = head or llist
+		print temp
 		if temp.next:
-			print temp.data
+			# print temp.data
 			temp = temp.next
-			this.reverseList(temp)
+			this.reverseList(temp,None)
 			print temp.data
+
 	def addNode(self, node):
 		temp = self.head
 		while (temp.next):
@@ -56,4 +58,5 @@ if __name__ == '__main__':
 
 
 	llist.printList()
-	llist.reverseList()
+	print "printing reverseList"
+	llist.reverseList(llist, llist.head)
