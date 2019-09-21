@@ -64,8 +64,7 @@ Object.entries(divs).map(( object ) => {
   object[1].addEventListener("click", function() {
   
   // Output innerHTML of the clicked element
-  console.log("Hello " + this +
-                  " (" + this.innerHTML + ") from map method...");
+  console.log(this);
   });
 });
 }
