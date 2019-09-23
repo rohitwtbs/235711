@@ -53,9 +53,19 @@ def reverse(head):
     while(ll):
         list.append(ll)
         ll = ll.next
-    head = list[0]
-    while(len(list)):
-        current = list.pop()
+    head = list[len(list)-1]
+    length = len(list)
+    for i in range(0,length-1):
+        previosu = list[i+1]
+        current = list[i]
+        previosu.next = current
+    list[0].next = None
+    return head
+
+
+
+
+
 
 
 
