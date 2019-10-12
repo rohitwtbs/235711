@@ -5,3 +5,10 @@
 *.json
 *.class
 *.dSYM
+haskell/
+django/
+vue/
+angularjs/
+swift/
+iOS/
+venv/
