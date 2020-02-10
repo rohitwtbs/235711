@@ -1,3 +1,5 @@
+// to do - deletion, post and preorder, search,min node,max node
+
 class Node {
     constructor(data) {
         this.data = data;
