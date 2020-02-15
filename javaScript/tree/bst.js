@@ -75,6 +75,14 @@ class BST {
         }
         this.findMinNode(node.left);
     }
+    
+    findMaxNode(node) {
+        if (node.right == null) {
+            console.log(node.data);
+            return node.data;
+        }
+        this.findMaxNode(node.right);
+    }
 }
 
 var bst = new BST(); 
@@ -96,3 +104,4 @@ bst.insert(27);
 // console.log('wait');
 // bst.postorder(bst.getRootNode());
 bst.findMinNode(bst.getRootNode());
+bst.findMaxNode(bst.getRootNode());
