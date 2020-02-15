@@ -67,6 +67,14 @@ class BST {
             console.log(node.data);
         }
     }
+
+    findMinNode(node) {
+        if ( node.left === null) {
+            console.log(node.data);
+            return node.data;
+        }
+        this.findMinNode(node.left);
+    }
 }
 
 var bst = new BST(); 
@@ -82,8 +90,9 @@ bst.insert(5);
 bst.insert(9); 
 bst.insert(27);
 
-bst.inorder(bst.getRootNode());
-console.log('wait');
-bst.preorder(bst.getRootNode());
-console.log('wait');
-bst.postorder(bst.getRootNode());
+// bst.inorder(bst.getRootNode());
+// console.log('wait');
+// bst.preorder(bst.getRootNode());
+// console.log('wait');
+// bst.postorder(bst.getRootNode());
+bst.findMinNode(bst.getRootNode());
