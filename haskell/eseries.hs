@@ -6,7 +6,6 @@ import Control.Monad
 import Data.Array
 import Data.Bits
 import Data.List
-import Data.List.Split
 import Data.Set
 import Debug.Trace
 import System.Environment
@@ -21,4 +20,4 @@ main = do
 
     forM_ [1..n] $ \n_itr -> do
         x <- readLn :: IO Double
-        putStrLn("check")
+        putStrLn(x)
