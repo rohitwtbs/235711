@@ -18,15 +18,19 @@ function resolveAfter2Seconds() {
     })
   }
   
-  async function sequentialStart() {
+ function sequentialStart() {
     console.log('==SEQUENTIAL START==')
   
     // 1. Execution gets here almost instantly
-    const slow = await resolveAfter2Seconds()
-    console.log(slow) // 2. this runs 2 seconds after 1.
+    // const slow = await resolveAfter2Seconds()
+    // console.log(slow) // 2. this runs 2 seconds after 1.
   
-    const fast = await resolveAfter1Second()
-    console.log(fast) // 3. this runs 3 seconds after 1.
+    // const fast = await resolveAfter1Second()
+    // console.log(fast) // 3. this runs 3 seconds after 1.
+    resolveAfter2Seconds().then(()=>{ 
+        resolveAfter1Second()
+    }
+    )
   }
   
   async function concurrentStart() {
@@ -67,13 +71,13 @@ function resolveAfter2Seconds() {
   sequentialStart() // after 2 seconds, logs "slow", then after 1 more second, "fast"
   
   // wait above to finish
-  setTimeout(concurrentStart, 4000) // after 2 seconds, logs "slow" and then "fast"
+//   setTimeout(concurrentStart, 4000) // after 2 seconds, logs "slow" and then "fast"
   
-  // wait again
-  setTimeout(concurrentPromise, 7000) // same as concurrentStart
+//   // wait again
+//   setTimeout(concurrentPromise, 7000) // same as concurrentStart
   
-  // wait again
-  setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then after 1 more second, "slow"
+//   // wait again
+//   setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then after 1 more second, "slow"
   
-  // wait again
-  setTimeout(parallelPromise, 13000) // same as parallel
+//   // wait again
+//   setTimeout(parallelPromise, 13000) // same as parallel
