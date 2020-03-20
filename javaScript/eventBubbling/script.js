@@ -7,6 +7,20 @@ var onLoadFunction = function() {
   event.
   *****/
   var fromCapture = true;
+  let neighbour = document.getElementById('neighbour');
+  console.log(neighbour);
+  neighbour.addEventListener('click', function(e) {
+    console.log('click');
+    let nc = document.getElementById('nChild');
+    let cs = new CustomEvent('check');
+    nc.dispatchEvent(cs);
+
+  }); 
+
+  let nc = document.getElementById('nChild');
+  nc.addEventListener('check', ()=> {
+    console.log('got the custom call');
+  })
 
   var p = document.querySelector('#parent');
 

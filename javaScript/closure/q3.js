@@ -9,7 +9,8 @@
 // }
 
 console.log((mul(1)(2)(3)))
-
+console.log((mul('1')('2')('3')))
+console.log((mul('1')('2')('3r')))
 
 function mul (x) {
     return function mul1 (y) { // anonymous function 

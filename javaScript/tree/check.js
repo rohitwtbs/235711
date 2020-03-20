@@ -39,3 +39,5 @@ console.log(rohit.logDetails());
 console.log(rohit.isMale = false);
 console.log(rohit.logDetails()); 
 // how to use a parent class method with the same name?
+// what if a class is without constructore? 
+// then i think we would not need super in the parent class
