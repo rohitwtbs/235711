@@ -1,61 +1,54 @@
-<div class="spinner">
-    <div class="spinner1">
-        <div class="spinner1"></div>
-    </div>
-</div>
-<div class="spinner1">
-    <div class="spinner2"></div>
+<div class="author">
+  <div class="spinner">
+      <div class="spinner-inside"></div>
+  </div>
 </div>
 
 <style>
+      .author {
+        border-color: 10px black;
+        height: 100px;
+        width: 100px;
+    }
+
     .spinner {
-  box-sizing: border-box;
-  position: absolute;
+        box-sizing: border-box;
+  position: relative;
   top: 30%;
   left: 50%;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   margin-top: -15px;
   margin-left: -15px;
   border-radius: 50%;
   border: 5px solid #ccc;
   border-top-color: #07d;
   animation: spinner .6s linear infinite;
-}
+    }
+
+    .spinner-inside {
+        box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: #07d;
+  animation: spinner1 .6s linear infinite;
+    }
+
+
 @keyframes spinner {
-  to {transform: rotate(360deg);}
-}
-
-.spinner1 {
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -15px;
-  margin-left: -15px;
-  border-radius: 50%;
-  border: 5px solid #ccc;
-  border-top-color: #07d;
-  animation: spinner1 .6s linear infinite;
-}
-
-.spinner2 {
-    box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -15px;
-  margin-left: -15px;
-  border-radius: 50%;
-  border: 5px solid #ccc;
-  border-top-color: #07d;
-  animation: spinner1 .6s linear infinite;
+  to {transform: rotate(-360deg);}
 }
 @keyframes spinner1 {
-  to {transform: rotate(360deg);}
+  to {transform: rotate(720deg);}
 }
 </style>
+<script>
+
+</script>
