@@ -75,6 +75,9 @@ def top_view(root):
             else:
                 rank_to_vertex[vertex_to_rank[top] + 1] = []
                 rank_to_vertex[vertex_to_rank[top] + 1].append(top.right)
+    # order the keys so that the top view in the sequence that we see.
+    import collections
+    od = collections.OrderedDict(sorted(rank_to_vertex.items()))
     for key,value in rank_to_vertex.items():
         address = value.pop(0)
         print (address.info,end=" ")
