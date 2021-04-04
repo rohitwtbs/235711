@@ -39,10 +39,9 @@ export default {
   },
   computed : {
     parse : function() {
-      console.log(this.$refs);
-      console.log('rohit');
-      console.log(this.$key);
-      console.log(this.payload.status);
+       for (let key in this.payload) {
+         
+       }
       //if (typeof(obj) === Object)
       return true;
       //else

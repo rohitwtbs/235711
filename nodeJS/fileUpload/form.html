@@ -1,0 +1,27 @@
+<form method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
+    <div>
+        <label>Select your profile picture:</label>
+        <input type="file" name="profile_pic" />
+    </div>
+    <div>
+        <input type="submit" name="btn_upload_profile_pic" value="Upload" id="upload"/>
+    </div>
+</form>
+
+<script>
+document.getElementById('upload').addEventListener('click', function () {
+  console.log("You finally clicked without jQuery");
+  var xhr = new XMLHttpRequest();
+xhr.open("POST", url, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    name: "Deska",
+    email: "deska@gmail.com",
+    phone: "342234553"
+ }));
+xhr.onload = function() {
+    var data = JSON.parse(this.responseText);
+    console.log(data);
+};
+});
+</script>

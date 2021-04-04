@@ -7,7 +7,7 @@ public class hashMap
       hm.put(100,"Amit");    
       hm.put(100,"Vijay");    
       hm.put(100,"Rahul");   
-       
+      hm.put(200,"Rohit");
       System.out.println("After invoking put() method ");  
       for(Map.Entry m:hm.entrySet()){    
        System.out.println(m.getKey()+" "+m.getValue());    

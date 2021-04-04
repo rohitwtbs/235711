@@ -33,3 +33,17 @@ for (let i = 0; i < arr.length; i++) {
     console.log('The index of this number is: ' + i);
   }, 3000);
 }
+
+// let i;
+
+for (i = 0; i < 3; i++) {
+
+  const log = () => {
+
+   console.log(i);
+
+  }
+
+  setTimeout(log, 100);
+
+}
