@@ -1,0 +1,16 @@
+
+<script>
+function createBase(baseNumber) {
+  //console.log(N,m,o);
+    return function(N,m,o) {
+      // we are referencing baseNumber here even though it was declared
+      // outside of this function. Closures allow us to do this in JavaScript
+      console.log(N,m,o);
+      return  () => baseNumber + N + m + o;
+    }
+  }
+  
+  var addSix = createBase(6);
+  console.log(addSix(10,10,10));
+
+  </script>
