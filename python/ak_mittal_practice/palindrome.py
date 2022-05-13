@@ -1,0 +1,2 @@
+strr = str(input())
+
