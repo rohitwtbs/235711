@@ -13,3 +13,5 @@ cursor.execute("select * from users")
 # explain the cursor object here
 for query in cursor:
     print(str(query))
+
+# ADD  A QUERY WITH MORE NO OF RECORDS AND TRY TO GET THE DATA IN PHASES`
