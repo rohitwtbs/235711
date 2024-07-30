@@ -30,6 +30,13 @@ class C(B,A):
         print("the call before the super")
         super().check()
 
+class D(C):
+    def __init__(self):
+        pass
+
 obj_c = C()
 obj_c.call()
 obj_c.check()
+
+obj_d =D()
+obj_d.check()
