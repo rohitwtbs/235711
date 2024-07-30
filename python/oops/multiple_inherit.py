@@ -20,7 +20,8 @@ class B:
 #         print("call called")
 
 
-
+# the inheritacne order is defined according to the 
+# MRO method resolution order
 class C(B,A):
     def __init__(self):
         pass
